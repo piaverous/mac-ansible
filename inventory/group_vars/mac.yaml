@@ -1,0 +1,6 @@
+homebrew_packages:
+  - middleclick
+  - dozer
+
+homebrew_cask_packages:
+  - multipass

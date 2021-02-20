@@ -1,0 +1,24 @@
+- name: Update homebrew
+  homebrew:
+    name: git
+    state: latest
+    update_homebrew: true
+  tags:
+  - brew
+
+- name: Install homebrew packages
+  homebrew:
+    name: '{{ item }}'
+    state: latest
+  loop: '{{ homebrew_packages }}'
+  tags:
+  - brew
+
+- name: Install homebrew cask packages
+  command: brew install --cask {{ item }}
+  loop: '{{ homebrew_cask_packages }}'
+  tags:
+  - brew
+
+- name: homebrew cleanup
+  command: brew cleanup

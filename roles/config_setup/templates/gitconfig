@@ -1,0 +1,7 @@
+[user]
+    name = Pierre Averous
+    email = piaverous@gmail.com
+[hub]
+    protocol = ssh
+[init]
+    defaultBranch = main
