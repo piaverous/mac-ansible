@@ -7,15 +7,15 @@
   - brew
 
 - name: Install homebrew packages
-  homebrew:
-    name: '{{ item }}'
-    state: latest
+  command: "brew install {{ item }}"
   loop: '{{ homebrew_packages }}'
   tags:
   - brew
 
 - name: Install homebrew cask packages
-  command: brew install --cask {{ item }}
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
   loop: '{{ homebrew_cask_packages }}'
   tags:
   - brew

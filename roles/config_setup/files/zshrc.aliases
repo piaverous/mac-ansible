@@ -1,0 +1,19 @@
+# Aliases for git
+alias gco="git checkout"
+alias gsu="git status"
+alias gcm="git commit"
+alias glog="git log --graph --oneline"
+alias gcz="git cz"
+
+# Global aliases
+alias ls="ls -hGl"
+alias ll="ls -hGl"
+alias la="ls -hAGl"
+alias duc="du -shc * .* | sort -hr"
+alias k="kubectl"
+alias kx="kubectx"
+alias kn"kubens"
+alias tf="terraform"
+alias deactivate="conda deactivate"
+alias ec="vi $HOME/.zshrc"
+alias sc="source $HOME/.zshrc"

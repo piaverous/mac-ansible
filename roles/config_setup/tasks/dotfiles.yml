@@ -4,54 +4,8 @@
     state: directory
   loop:
   - config
-  - config/yamllint
-  tags:
-  - dotfiles
 
-- name: dotfiles links
-  file:
-    src: '{{ ansible_env.PWD }}/roles/adam_mac/files/dotfiles/{{ item }}'
-    path: '~/.{{ item }}'
-    state: link
-  loop:
-  - ansible.cfg
-  - config/karabiner
-  - config/starship.toml
-  - config/yamllint/config
-  - gitconfig
-  - gitignore_global
-  - ipython/profile_default/startup/00-imports.py
-  - mrconfig
-  - ssh/config
-  tags:
-  - dotfiles
-
-- name: innotop.conf
-  copy:
-    src: dotfiles/innotop/innotop.conf
-    dest: ~/.innotop/innotop.conf
-    force: false  # Only if it doesn't exist
-
-- name: pypirc
-  copy:
-    src: dotfiles/pypirc
-    dest: ~/.pypirc
-    force: false
-
-- name: zsh - git repo for prezto fork
-  git:
-    repo: git@github.com:adamchainz/prezto.git
-    dest: ~/.zprezto
-
-- name: zsh - link in prezto files
-  file:
-    state: link
-    src: '~/.zprezto/runcoms/{{ item }}'
-    path: '~/.{{ item }}'
-  loop:
-  - zlogin
-  - zlogout
-  - zprofile
-  - zshenv
-  - zshrc
-  - zpreztorc
+- name: Add aliases to .zshrc
+  blockinfile:
+    block: "{{ lookup('file', 'zshrc.aliases') }}"
+    path: ~/.zshrc
