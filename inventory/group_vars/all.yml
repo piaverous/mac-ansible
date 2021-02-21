@@ -1,0 +1,9 @@
+new_line: "\n"
+
+setup_init_dirs:
+  - name: Work
+    path: ~/Work
+  - name: Padok
+    path: ~/Work/Padok
+  - name: Coding
+    path: ~/Coding

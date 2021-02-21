@@ -9,3 +9,4 @@
   blockinfile:
     block: "{{ lookup('file', 'zshrc.aliases') }}"
     path: ~/.zshrc
+    marker: "# {mark} ALIASES BLOCK"

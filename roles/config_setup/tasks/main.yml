@@ -1,5 +1,8 @@
+- name: Setup workdirs
+  import_tasks: directories.yml
+  
 - name: Install things
   import_tasks: installs.yml
 
-- name: Link in dotfiles
+- name: Setup basic dotfile config
   import_tasks: dotfiles.yml
