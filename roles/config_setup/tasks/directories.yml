@@ -13,9 +13,6 @@
     setup_init_dirs_alias_block: '{{ setup_init_dirs_alias_block }}{{ item.name|upper }}={{ item.path }}{{ new_line }}alias {{ item.name|lower }}=cd ${{ item.name|upper }}{{ new_line }}'
   loop: '{{ setup_init_dirs }}'
 
-- debug:
-    var: setup_init_dirs_alias_block
-
 - name: Add dir shortcuts to .zshrc
   blockinfile:
     block: "{{ setup_init_dirs_alias_block }}"

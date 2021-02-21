@@ -12,3 +12,7 @@ setup:
 ## run: Run the playbook
 run:
 	@ansible-playbook -i inventory/hosts.ini playbook.yml
+
+## run: Run the playbook
+brew:
+	@ansible-playbook -i inventory/hosts.ini playbook.yml --tags brew
