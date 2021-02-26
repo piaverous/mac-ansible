@@ -2,6 +2,7 @@ homebrew_packages:
   - middleclick
   - dozer
   - direnv
+  - tfenv
 
 homebrew_cask_packages:
   - multipass
