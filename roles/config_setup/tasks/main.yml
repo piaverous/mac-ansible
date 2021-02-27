@@ -1,11 +1,21 @@
 - name: Setup workdirs
   import_tasks: directories.yml
+  tags:
+    - directories
+    - dirs
   
 - name: Install things
   import_tasks: installs.yml
+  tags:
+    - brew
+    - install
 
 - name: Setup basic dotfile config
   import_tasks: dotfiles.yml
+  tags:
+    - dotfiles
 
 - name: Run config commands
   import_tasks: config.yml
+  tags:
+    - config
