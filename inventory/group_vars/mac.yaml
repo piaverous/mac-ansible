@@ -6,3 +6,5 @@ homebrew_packages:
 
 homebrew_cask_packages:
   - multipass
+
+default_screenshot_dir: ~/Downloads

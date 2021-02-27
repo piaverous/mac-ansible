@@ -6,3 +6,6 @@
 
 - name: Setup basic dotfile config
   import_tasks: dotfiles.yml
+
+- name: Run config commands
+  import_tasks: config.yml
