@@ -4,6 +4,10 @@ homebrew_packages:
   - direnv
   - tfenv
   - tree
+  - sshuttle
+  - nmap
+  - arp-scan
+  - htop
 
 homebrew_cask_packages:
   - multipass
