@@ -8,6 +8,8 @@ homebrew_packages:
   - nmap
   - arp-scan
   - htop
+  - imagemagick
+  - fzf
 
 homebrew_cask_packages:
   - multipass
