@@ -12,6 +12,9 @@ homebrew_packages:
   - fzf
   - ngrep
   - commitizen
+  - awscli
+  - jq
+  - watch
 
 homebrew_cask_packages:
   - multipass

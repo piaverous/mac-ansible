@@ -6,17 +6,17 @@
   tags:
   - brew
 
-- name: Install homebrew packages
-  command: "brew install {{ item }}"
-  loop: '{{ homebrew_packages }}'
-  tags:
-  - brew
-
 - name: Install homebrew cask packages
   homebrew_cask:
     name: "{{ item }}"
     state: present
   loop: '{{ homebrew_cask_packages }}'
+  tags:
+  - brew
+
+- name: Install homebrew packages
+  command: "brew install {{ item }}"
+  loop: '{{ homebrew_packages }}'
   tags:
   - brew
 
