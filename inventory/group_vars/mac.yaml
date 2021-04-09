@@ -1,19 +1,19 @@
 homebrew_packages:
-  - middleclick
-  - dozer
-  - direnv
-  - tfenv
-  - tree
-  - sshuttle
-  - nmap
   - arp-scan
+  - awscli
+  - commitizen
+  - direnv
+  - dozer
+  - fzf
   - htop
   - imagemagick
-  - fzf
-  - ngrep
-  - commitizen
-  - awscli
   - jq
+  - middleclick
+  - ngrep
+  - nmap
+  - sshuttle
+  - tfenv
+  - tree
   - watch
 
 homebrew_cask_packages:
