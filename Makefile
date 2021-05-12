@@ -9,10 +9,10 @@ help: Makefile
 setup:
 	@./scripts/setup.sh
 
-## run: Run the playbook
+## run: Run the whole playbook
 run:
 	@ansible-playbook -i inventory/hosts.ini playbook.yml
 
-## run: Run the playbook
+## brew: Run only homebrew install tasks 
 brew:
 	@ansible-playbook -i inventory/hosts.ini playbook.yml --tags brew
