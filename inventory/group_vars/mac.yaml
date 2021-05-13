@@ -16,6 +16,8 @@ homebrew_packages:
   - middleclick
   - ngrep
   - nmap
+  - pipenv
+  - pyenv
   - sshuttle
   - tfenv
   - tree
