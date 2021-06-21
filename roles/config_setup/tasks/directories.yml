@@ -1,17 +1,17 @@
 - name: Create dirs
   file:
-    path: '{{ item.path }}'
+    path: "{{ item.path }}"
     state: directory
   loop: "{{ setup_init_dirs }}"
 
 - name: Set var as empty string
   set_fact:
-    setup_init_dirs_alias_block: ''
+    setup_init_dirs_alias_block: ""
 
 - name: Create variable with directories
   set_fact:
     setup_init_dirs_alias_block: '{{ setup_init_dirs_alias_block }}{{ item.name|upper }}={{ item.path }}{{ new_line }}alias {{ item.name|lower }}="cd ${{ item.name|upper }}"{{ new_line }}'
-  loop: '{{ setup_init_dirs }}'
+  loop: "{{ setup_init_dirs }}"
 
 - name: Add dir shortcuts to .zshrc
   blockinfile:

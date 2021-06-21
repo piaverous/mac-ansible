@@ -4,13 +4,13 @@
     state: latest
     update_homebrew: true
   tags:
-  - brew
+    - brew
 
 - name: Add custom brew taps
   command: "brew tap {{ item }}"
   loop: '{{ homebrew_taps }}'
   tags:
-  - brew
+    - brew
 
 - name: Install homebrew cask packages
   homebrew_cask:
@@ -18,15 +18,15 @@
     state: present
   loop: '{{ homebrew_cask_packages }}'
   tags:
-  - brew
+    - brew
 
 - name: Install homebrew packages
   command: "brew install {{ item }}"
   loop: '{{ homebrew_packages }}'
   tags:
-  - brew
+    - brew
 
 - name: homebrew cleanup
   command: brew cleanup
   tags:
-  - brew
+    - brew

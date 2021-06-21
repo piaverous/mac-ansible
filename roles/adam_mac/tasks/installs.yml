@@ -4,21 +4,21 @@
     state: latest
     update_homebrew: true
   tags:
-  - brew
+    - brew
 
 - name: Install homebrew packages
   homebrew:
-    name: '{{ item }}'
+    name: "{{ item }}"
     state: latest
-  loop: '{{ homebrew_packages }}'
+  loop: "{{ homebrew_packages }}"
   tags:
-  - brew
+    - brew
 
 - name: Install homebrew cask packages
   command: brew install --cask {{ item }}
-  loop: '{{ homebrew_cask_packages }}'
+  loop: "{{ homebrew_cask_packages }}"
   tags:
-  - brew
+    - brew
 
 - name: homebrew cleanup
   command: brew cleanup
@@ -32,16 +32,16 @@
   failed_when: >
     pyenv_install_result.rc != 0 and
     pyenv_install_result.stderr_lines != ["pyenv: /Users/chainz/.pyenv/versions/" + item + " already exists"]
-  loop: '{{ pyenv_python_versions }}'
+  loop: "{{ pyenv_python_versions }}"
   tags:
-  - python
-  - pyenv
+    - python
+    - pyenv
 
 - name: python versions active
   command: pyenv global {{ pyenv_python_versions|join(" ") }}
   tags:
-  - python
-  - pyenv
+    - python
+    - pyenv
 
 - name: python versions shims rehashed
   # Needs running after every update of pyenv, at least, to fix the pyenv shims
@@ -50,40 +50,40 @@
 - name: python versions latest build requirements
   pip:
     name:
-    - Cython
-    - pip
-    - pip-tools
-    - setuptools
-    - virtualenv
+      - Cython
+      - pip
+      - pip-tools
+      - setuptools
+      - virtualenv
     state: latest
     executable: '~/.pyenv/versions/{{ item }}/bin/pip{% if "pypy3" in item %}3{% endif %}'
   environment:
     PIP_REQUIRE_VIRTUALENV: ""
-  loop: '{{ pyenv_python_versions }}'
+  loop: "{{ pyenv_python_versions }}"
   tags:
-  - python
-  - pyenv
+    - python
+    - pyenv
 
 - name: Install pip packages
   pip:
-    name: '{{ pip_packages }}'
+    name: "{{ pip_packages }}"
     state: latest
-    executable: '~/.pyenv/versions/{{ pyenv_python_versions[0] }}/bin/pip'
+    executable: "~/.pyenv/versions/{{ pyenv_python_versions[0] }}/bin/pip"
   environment:
     PIP_REQUIRE_VIRTUALENV: ""
   tags:
-  - python
+    - python
 
 - name: pyenv rehash
   command: pyenv rehash
   tags:
-  - python
-  - pyenv
+    - python
+    - pyenv
 
 - name: Install gem packages
   gem:
-    name: '{{ item }}'
+    name: "{{ item }}"
     state: latest
-  loop: '{{ gem_packages }}'
+  loop: "{{ gem_packages }}"
   tags:
-  - gem
+    - gem

@@ -1,154 +1,154 @@
 homebrew_packages:
-- autoconf
-- autojump
-- automake
-- bazaar
-- cloc
-- coreutils
-- cowsay
-- enchant
-- exiftool
-- fd
-- fdupes
-- ffmpeg
-- freetype
-- fswatch
-- gdal
-- gdbm
-- git
-- github/gh/gh
-- goaccess
-- gpg
-- graphicsmagick
-- heroku/brew/heroku
-- hub
-- hyperfine
-- inetutils
-- jhead
-- jpeg
-- jpegoptim
-- jq
-- lesspipe
-- libevent
-- libmemcached
-- libpng
-- libtool
-- libyaml
-- memcached
-- myrepos
-- ncdu
-- nginx
-- nvm
-- openssl
-- ossp-uuid
-- pandoc
-- parallel
-- percona-toolkit
-- pkg-config
-- pngcrush
-- postgresql
-- pre-commit
-- pwgen
-- pyenv
-- pypy
-- python
-- qpdf
-- readline
-- rsync
-- rtmpdump
-- ruby
-- ruby-build
-- ruby-install
-- sd
-- shellcheck
-- sqlite
-- starship
-- swig
-- tree
-- watch
-- watchman
-- wget
-- xz
-- zlib
-- zsh-completions
+  - autoconf
+  - autojump
+  - automake
+  - bazaar
+  - cloc
+  - coreutils
+  - cowsay
+  - enchant
+  - exiftool
+  - fd
+  - fdupes
+  - ffmpeg
+  - freetype
+  - fswatch
+  - gdal
+  - gdbm
+  - git
+  - github/gh/gh
+  - goaccess
+  - gpg
+  - graphicsmagick
+  - heroku/brew/heroku
+  - hub
+  - hyperfine
+  - inetutils
+  - jhead
+  - jpeg
+  - jpegoptim
+  - jq
+  - lesspipe
+  - libevent
+  - libmemcached
+  - libpng
+  - libtool
+  - libyaml
+  - memcached
+  - myrepos
+  - ncdu
+  - nginx
+  - nvm
+  - openssl
+  - ossp-uuid
+  - pandoc
+  - parallel
+  - percona-toolkit
+  - pkg-config
+  - pngcrush
+  - postgresql
+  - pre-commit
+  - pwgen
+  - pyenv
+  - pypy
+  - python
+  - qpdf
+  - readline
+  - rsync
+  - rtmpdump
+  - ruby
+  - ruby-build
+  - ruby-install
+  - sd
+  - shellcheck
+  - sqlite
+  - starship
+  - swig
+  - tree
+  - watch
+  - watchman
+  - wget
+  - xz
+  - zlib
+  - zsh-completions
 
 homebrew_cask_packages:
-- '0xed'
-- alfred
-- anki
-- calibre
-- discord
-- disk-inventory-x
-- docker
-- evernote
-- firefox
-- homebrew/cask-fonts/font-ubuntu-mono-nerd-font
-- franz
-- iterm2
-- istat-menus
-- java
-- karabiner-elements
-- keyboard-maestro
-- mactex
-- mountain-duck
-- mplayerx
-- paintbrush
-- rectangle
-- rescuetime
-- sequel-pro
-- silverlight
-- skim
-- skype
-- soundflower
-- steam
-- sublime-text
-- tableplus
-- texmaker
-- unshaky
-- vagrant
-- virtualbox
-- vlc
-- xquartz
+  - "0xed"
+  - alfred
+  - anki
+  - calibre
+  - discord
+  - disk-inventory-x
+  - docker
+  - evernote
+  - firefox
+  - homebrew/cask-fonts/font-ubuntu-mono-nerd-font
+  - franz
+  - iterm2
+  - istat-menus
+  - java
+  - karabiner-elements
+  - keyboard-maestro
+  - mactex
+  - mountain-duck
+  - mplayerx
+  - paintbrush
+  - rectangle
+  - rescuetime
+  - sequel-pro
+  - silverlight
+  - skim
+  - skype
+  - soundflower
+  - steam
+  - sublime-text
+  - tableplus
+  - texmaker
+  - unshaky
+  - vagrant
+  - virtualbox
+  - vlc
+  - xquartz
 
 pyenv_python_versions:
-# In precedence order
-- 3.9.1
-- 3.8.7
-- 3.7.9
-- 3.6.12
-- 3.5.9
-- 3.4.10
-- 2.7.18
-- 3.10-dev
-- pypy3.6-7.1.1
-- pypy2.7-7.1.1
+  # In precedence order
+  - 3.9.1
+  - 3.8.7
+  - 3.7.9
+  - 3.6.12
+  - 3.5.9
+  - 3.4.10
+  - 2.7.18
+  - 3.10-dev
+  - pypy3.6-7.1.1
+  - pypy2.7-7.1.1
 
 pip_packages:
-- awscli
-- black
-- boto
-- boto3
-- build
-- csvkit
-- ec2-ssh
-- flake8
-- httpie
-- ipdb
-- ipython
-- lifelogger
-- pipenv
-- pygments
-- pythonpy
-- python-language-server
-- pyyaml
-- requests
-- s3cmd
-- six
-- tox
-- twine
-- youtube-dl
-- wheel
+  - awscli
+  - black
+  - boto
+  - boto3
+  - build
+  - csvkit
+  - ec2-ssh
+  - flake8
+  - httpie
+  - ipdb
+  - ipython
+  - lifelogger
+  - pipenv
+  - pygments
+  - pythonpy
+  - python-language-server
+  - pyyaml
+  - requests
+  - s3cmd
+  - six
+  - tox
+  - twine
+  - youtube-dl
+  - wheel
 
 gem_packages:
-- jekyll
-- jekyll-tagging
+  - jekyll
+  - jekyll-tagging

@@ -2,11 +2,11 @@
 - hosts: mac
   connection: local
   tasks:
-  - debug:
-      msg: Check we are running in the directory of the script
-    failed_when: not ansible_env.PWD.endswith('/mac-ansible')
+    - debug:
+        msg: Check we are running in the directory of the script
+      failed_when: not ansible_env.PWD.endswith('/mac-ansible')
 
 - hosts: mac
   connection: local
   roles:
-  - config_setup
+    - config_setup

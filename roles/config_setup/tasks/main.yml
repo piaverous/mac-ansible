@@ -3,7 +3,7 @@
   tags:
     - directories
     - dirs
-  
+
 - name: Install things
   import_tasks: installs.yml
   tags:
