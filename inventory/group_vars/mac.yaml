@@ -1,11 +1,14 @@
 homebrew_taps:
   - heroku/brew
+  - homebrew/autoupdate
 
 homebrew_packages:
+  - ansible-cmdb
   - arp-scan
   - awscli
   - commitizen
   - direnv
+  - dive
   - dozer
   - fzf
   - helm
@@ -13,6 +16,7 @@ homebrew_packages:
   - htop
   - imagemagick
   - jq
+  - kind
   - middleclick
   - ngrep
   - nmap
