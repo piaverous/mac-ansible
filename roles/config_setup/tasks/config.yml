@@ -1,2 +1,2 @@
 - name: CHange default screenshot directory
-  command: defaults write com.apple.screencapture location {{ default_screenshot_dir }}
+  command: defaults write com.apple.screencapture location {{ default_screenshot_dir }} # noqa no-changed-when

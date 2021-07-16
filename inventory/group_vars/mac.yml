@@ -9,7 +9,6 @@ homebrew_packages:
   - commitizen
   - direnv
   - dive
-  - dozer
   - fzf
   - helm
   - heroku
@@ -17,10 +16,10 @@ homebrew_packages:
   - imagemagick
   - jq
   - kind
-  - middleclick
   - ngrep
   - nmap
   - pipenv
+  - pre-commit
   - pulumi
   - pyenv
   - sshuttle
@@ -29,6 +28,8 @@ homebrew_packages:
   - watch
 
 homebrew_cask_packages:
+  - dozer
+  - middleclick
   - multipass
 
 default_screenshot_dir: ~/Downloads

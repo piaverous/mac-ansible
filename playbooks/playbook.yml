@@ -2,7 +2,8 @@
 - hosts: mac
   connection: local
   tasks:
-    - debug:
+    - name: Check if workdir is the right dir
+      debug:
         msg: Check we are running in the directory of the script
       failed_when: not ansible_env.PWD.endswith('/mac-ansible')
 

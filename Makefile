@@ -11,8 +11,8 @@ setup:
 
 ## run: Run the whole playbook
 run:
-	@ansible-playbook -i inventory/hosts.ini playbook.yml
+	@ansible-playbook -i inventory/hosts.ini playbooks/playbook.yml
 
-## brew: Run only homebrew install tasks 
+## brew: Run only homebrew install tasks
 brew:
-	@ansible-playbook -i inventory/hosts.ini playbook.yml --tags brew
+	@ansible-playbook -i inventory/hosts.ini playbooks/playbook.yml --tags brew

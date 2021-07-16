@@ -1,4 +1,4 @@
-- name: dotfiles dirs
+- name: dotfiles dirs # noqa risky-file-permissions
   file:
     path: "~/.{{ item }}"
     state: directory

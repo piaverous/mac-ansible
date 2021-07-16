@@ -1,4 +1,4 @@
-- name: Update homebrew
+- name: Update homebrew # noqa package-latest
   homebrew:
     name: git
     state: latest
@@ -7,8 +7,9 @@
     - brew
 
 - name: Add custom brew taps
-  command: "brew tap {{ item }}"
-  loop: '{{ homebrew_taps }}'
+  homebrew_tap:
+    name: "{{ item }}"
+  loop: "{{ homebrew_taps }}"
   tags:
     - brew
 
@@ -16,17 +17,17 @@
   homebrew_cask:
     name: "{{ item }}"
     state: present
-  loop: '{{ homebrew_cask_packages }}'
+  loop: "{{ homebrew_cask_packages }}"
   tags:
     - brew
 
 - name: Install homebrew packages
-  command: "brew install {{ item }}"
-  loop: '{{ homebrew_packages }}'
+  homebrew:
+    name: "{{ homebrew_packages }}"
   tags:
     - brew
 
-- name: homebrew cleanup
+- name: homebrew cleanup # noqa no-changed-when
   command: brew cleanup
   tags:
     - brew
