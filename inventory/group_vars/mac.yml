@@ -24,6 +24,7 @@ homebrew_packages:
   - pyenv
   - sshuttle
   - tfenv
+  - tldr
   - tree
   - watch
 
